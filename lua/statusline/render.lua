@@ -1,8 +1,6 @@
 local fn = vim.fn
 local api = vim.api
 
-require('user.loader').highlight 'statusline'
-
 local modes = {
   ['n'] = { 'NORMAL', 'St_NormalMode' },
   ['niI'] = { 'NORMAL i', 'St_NormalMode' },
