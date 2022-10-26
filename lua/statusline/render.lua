@@ -87,13 +87,19 @@ local lsp_diagnostics = function()
 end
 
 local lsp_status = function()
+  local result = {}
   for _, client in ipairs(vim.lsp.get_active_clients()) do
     if client.attached_buffers[vim.api.nvim_get_current_buf()] then
-      return (vim.o.columns > 70 and '%#St_LspStatus#' .. '  LSP ~ ' .. client.name .. ' ') or '   LSP '
+      table.insert(result, client.name)
     end
   end
-end
 
+  if next(result) == nil then
+    return ''
+  end
+
+  return '%#St_LspStatus#' .. '  LSP ' .. table.concat(result, ', ')
+end
 local dap_status = function()
   local status, dap = pcall(require, 'dap')
   if not status then
@@ -101,7 +107,7 @@ local dap_status = function()
   end
 
   local session = dap.session()
-  return (session ~= nil and '%#St_DapStatus#' .. '   DAP ~ ' .. session.config.name .. ' ') or ''
+  return (session ~= nil and '%#St_DapStatus#' .. '   DAP ' .. session.config.name .. ' ') or ''
 end
 
 local git = function()
@@ -136,7 +142,7 @@ return function()
     '%=',
 
     lsp_diagnostics(),
-    lsp_status() or '',
+    lsp_status(),
     dap_status(),
     git(),
     cwd(),
