@@ -137,15 +137,15 @@ local git = function(result)
   local data = { '%#StatusLineText# ' .. git_status.head }
 
   if git_status.added and git_status.added ~= 0 then
-    table.insert(data, ' ' .. git_status.added)
+    table.insert(data, '%#StatusLineGitAdded# ' .. git_status.added)
   end
 
   if git_status.changed and git_status.changed ~= 0 then
-    table.insert(data, ' ' .. git_status.changed)
+    table.insert(data, '%#StatusLineGitChanged# ' .. git_status.changed)
   end
 
   if git_status.removed and git_status.removed ~= 0 then
-    table.insert(data, ' ' .. git_status.removed)
+    table.insert(data, '%#StatusLineGitRemoved# ' .. git_status.removed)
   end
 
   table.insert(result, table.concat(data, ' '))

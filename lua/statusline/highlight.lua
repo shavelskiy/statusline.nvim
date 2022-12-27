@@ -50,6 +50,10 @@ return function()
     { 'StatusLineLspStatus', { fg = colors.base0D, bg = colors.base01 } },
     { 'StatusLineLspProgress', { fg = colors.base0B, bg = colors.base01 } },
 
+    { 'StatusLineGitAdded', { fg = colors.base0B, bg = colors.base01 } },
+    { 'StatusLineGitChanged', { fg = colors.base0D, bg = colors.base01 } },
+    { 'StatusLineGitRemoved', { fg = colors.base08, bg = colors.base01 } },
+
     { 'StatusLineDap', { fg = colors.base0B, bg = colors.base01 } },
   }
 
