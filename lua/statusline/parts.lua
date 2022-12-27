@@ -28,7 +28,8 @@ local modes = {
 
 local cover_nvim_tree = function()
   for _, win in pairs(vim.api.nvim_tabpage_list_wins(0)) do
-    if vim.bo[vim.api.nvim_win_get_buf(win)].ft == 'NvimTree' then
+    local filetype = vim.bo[vim.api.nvim_win_get_buf(win)].ft
+    if filetype == 'NvimTree' or filetype == 'DiffviewFiles' then
       return '%#NvimTreeNormal#' .. string.rep(' ', vim.api.nvim_win_get_width(win) + 1)
     end
   end
