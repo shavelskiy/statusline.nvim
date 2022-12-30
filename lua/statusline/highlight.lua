@@ -18,10 +18,12 @@ return function()
     base0F = '#be5046',
   }
 
+  local bubleBackgroud = colors.base02
+
   local defaultHighlight = {
     { 'StatusLine', { bg = 'none' } },
-    { 'StatusLineText', { fg = colors.base04, bg = colors.base01 } },
-    { 'StatusLineSeparator', { fg = colors.base01, bg = 'none' } },
+    { 'StatusLineText', { fg = colors.base04, bg = bubleBackgroud } },
+    { 'StatusLineSeparator', { fg = bubleBackgroud, bg = 'none' } },
 
     { 'StatusLineNormalMode', { bg = colors.base0D, fg = colors.base00, bold = true } },
     { 'StatusLineInsertMode', { bg = colors.base0E, fg = colors.base00, bold = true } },
@@ -43,18 +45,18 @@ return function()
     { 'StatusLineCommandModeSep', { fg = colors.base0B, bg = 'none' } },
     { 'StatusLineSelectModeSep', { fg = colors.base0D, bg = 'none' } },
 
-    { 'StatusLineLspError', { fg = colors.base0F, bg = colors.base01 } },
-    { 'StatusLineLspWarning', { fg = colors.base0A, bg = colors.base01 } },
-    { 'StatusLineLspHints', { fg = colors.base0E, bg = colors.base01 } },
-    { 'StatusLineLspInfo', { fg = colors.base0B, bg = colors.base01 } },
-    { 'StatusLineLspStatus', { fg = colors.base0D, bg = colors.base01 } },
-    { 'StatusLineLspProgress', { fg = colors.base0B, bg = colors.base01 } },
+    { 'StatusLineLspError', { fg = colors.base0F, bg = bubleBackgroud } },
+    { 'StatusLineLspWarning', { fg = colors.base0A, bg = bubleBackgroud } },
+    { 'StatusLineLspHints', { fg = colors.base0E, bg = bubleBackgroud } },
+    { 'StatusLineLspInfo', { fg = colors.base0B, bg = bubleBackgroud } },
+    { 'StatusLineLspStatus', { fg = colors.base0D, bg = bubleBackgroud } },
+    { 'StatusLineLspProgress', { fg = colors.base0B, bg = bubleBackgroud } },
 
-    { 'StatusLineGitAdded', { fg = colors.base0B, bg = colors.base01 } },
-    { 'StatusLineGitChanged', { fg = colors.base0D, bg = colors.base01 } },
-    { 'StatusLineGitRemoved', { fg = colors.base08, bg = colors.base01 } },
+    { 'StatusLineGitAdded', { fg = colors.base0B, bg = bubleBackgroud } },
+    { 'StatusLineGitChanged', { fg = colors.base0D, bg = bubleBackgroud } },
+    { 'StatusLineGitRemoved', { fg = colors.base08, bg = bubleBackgroud } },
 
-    { 'StatusLineDap', { fg = colors.base0B, bg = colors.base01 } },
+    { 'StatusLineDap', { fg = colors.base0B, bg = bubleBackgroud } },
   }
 
   for _, data in pairs(defaultHighlight) do
