@@ -98,11 +98,20 @@ local lsp_diagnostics = function(result)
 end
 
 local lsp_status = function(result)
+  local filetype = vim.api.nvim_buf_get_option(vim.api.nvim_get_current_buf(), 'filetype')
   local data = {}
   for _, client in ipairs(vim.lsp.get_active_clients()) do
-    if client.attached_buffers[vim.api.nvim_get_current_buf()] then
-      table.insert(data, client.name)
+    if client.name ~= 'null-ls' then
+      if client.attached_buffers[vim.api.nvim_get_current_buf()] then
+        table.insert(data, client.name)
+      end
     end
+  end
+
+  local sources = require 'null-ls.sources'
+
+  for _, source in ipairs(sources.get_available(filetype)) do
+    table.insert(data, source.name .. '*')
   end
 
   if next(data) ~= nil then
