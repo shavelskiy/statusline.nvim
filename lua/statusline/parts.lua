@@ -63,7 +63,7 @@ local lsp_progress = function()
   local frame = math.floor(ms / 120) % #spinners
   local content = string.format(' %%<%s %s %s (%s%%%%) ', spinners[frame + 1], title, msg, percentage)
 
-  return ('%#StatusLineLspProgress#' .. content) or ''
+  return ('%#StatusLineLspProgress# ' .. content .. ' ') or ''
 end
 
 local lsp_diagnostics = function(result)

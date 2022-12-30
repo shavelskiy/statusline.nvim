@@ -19,10 +19,9 @@ return function()
   }
 
   local defaultHighlight = {
-    { 'StatusLine', { bg = colors.base00 } },
+    { 'StatusLine', { bg = 'none' } },
     { 'StatusLineText', { fg = colors.base04, bg = colors.base01 } },
-    { 'StatusLineTextCenter', { fg = colors.base04, bg = 'none' } },
-    { 'StatusLineSeparator', { fg = colors.base01, bg = colors.base00 } },
+    { 'StatusLineSeparator', { fg = colors.base01, bg = 'none' } },
 
     { 'StatusLineNormalMode', { bg = colors.base0D, fg = colors.base00, bold = true } },
     { 'StatusLineInsertMode', { bg = colors.base0E, fg = colors.base00, bold = true } },
@@ -34,15 +33,15 @@ return function()
     { 'StatusLineCommandMode', { bg = colors.base0B, fg = colors.base00, bold = true } },
     { 'StatusLineSelectMode', { bg = colors.base0D, fg = colors.base00, bold = true } },
 
-    { 'StatusLineNormalModeSep', { fg = colors.base0D, bg = colors.base00 } },
-    { 'StatusLineInsertModeSep', { fg = colors.base0E, bg = colors.base00 } },
-    { 'StatusLineTerminalModeSep', { fg = colors.base0B, bg = colors.base00 } },
-    { 'StatusLineNTerminalModeSep', { fg = colors.base0A, bg = colors.base00 } },
-    { 'StatusLineVisualModeSep', { fg = colors.base0C, bg = colors.base00 } },
-    { 'StatusLineReplaceModeSep', { fg = colors.base08, bg = colors.base00 } },
-    { 'StatusLineConfirmModeSep', { fg = colors.base09, bg = colors.base00 } },
-    { 'StatusLineCommandModeSep', { fg = colors.base0B, bg = colors.base00 } },
-    { 'StatusLineSelectModeSep', { fg = colors.base0D, bg = colors.base00 } },
+    { 'StatusLineNormalModeSep', { fg = colors.base0D, bg = 'none' } },
+    { 'StatusLineInsertModeSep', { fg = colors.base0E, bg = 'none' } },
+    { 'StatusLineTerminalModeSep', { fg = colors.base0B, bg = 'none' } },
+    { 'StatusLineNTerminalModeSep', { fg = colors.base0A, bg = 'none' } },
+    { 'StatusLineVisualModeSep', { fg = colors.base0C, bg = 'none' } },
+    { 'StatusLineReplaceModeSep', { fg = colors.base08, bg = 'none' } },
+    { 'StatusLineConfirmModeSep', { fg = colors.base09, bg = 'none' } },
+    { 'StatusLineCommandModeSep', { fg = colors.base0B, bg = 'none' } },
+    { 'StatusLineSelectModeSep', { fg = colors.base0D, bg = 'none' } },
 
     { 'StatusLineLspError', { fg = colors.base0F, bg = colors.base01 } },
     { 'StatusLineLspWarning', { fg = colors.base0A, bg = colors.base01 } },

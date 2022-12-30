@@ -9,7 +9,8 @@ local left = function()
 end
 
 local center = function()
-  return '%=%#StatusLineTextCenter#' .. parts.lsp_progress() .. '%='
+  local content = '%#StatusLineSeparator#' .. parts.lsp_progress() .. '%#StatusLineSeparator#%#StatusLineNone#'
+  return '%=' .. content .. '%='
 end
 
 local right = function()
