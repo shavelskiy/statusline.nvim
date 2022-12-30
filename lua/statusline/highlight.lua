@@ -21,6 +21,7 @@ return function()
   local defaultHighlight = {
     { 'StatusLine', { bg = colors.base00 } },
     { 'StatusLineText', { fg = colors.base04, bg = colors.base01 } },
+    { 'StatusLineTextCenter', { fg = colors.base04, bg = 'none' } },
     { 'StatusLineSeparator', { fg = colors.base01, bg = colors.base00 } },
 
     { 'StatusLineNormalMode', { bg = colors.base0D, fg = colors.base00, bold = true } },

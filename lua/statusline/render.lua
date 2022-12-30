@@ -9,7 +9,7 @@ local left = function()
 end
 
 local center = function()
-  return '%=' .. parts.lsp_progress() .. '%='
+  return '%=%#StatusLineTextCenter#' .. parts.lsp_progress() .. '%='
 end
 
 local right = function()
